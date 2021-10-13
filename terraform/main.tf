@@ -24,11 +24,10 @@ resource "azurerm_resource_group" "resourcegroup" {
     location = var.location
 }
 
-module "subnet1"{
-  source = "./subnet/"
-
+module "subnet1" {
+  source = "./subnet"
   subnet_name = "app_subnet"
-  address_prefix = ""
+  address_prefix = "10.1.2.0/27"
 
 }
 
