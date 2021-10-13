@@ -20,7 +20,7 @@ data "azurerm_virtual_network" "virtualnetwork" {
 }
 
 
-resource "azurerm_resource_group" "resourcegroup" {
+data "azurerm_resource_group" "resourcegroup" {
     name = var.rg_name
     location = var.location
 }
