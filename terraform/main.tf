@@ -25,10 +25,10 @@ resource "azurerm_resource_group" "resourcegroup" {
 }
 
 module "azurerm_subnet" "subnet1"{
-  source = ""
+  source = "git::https://github.com/kaurharpreet15/git-repo/tree/main/terraform/subnet"
 
   subnet_name = "app_subnet"
-  address_prefix = ""
+  address_prefix = "10.1.3.0/27"
 
 }
 
