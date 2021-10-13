@@ -27,6 +27,9 @@ data "azurerm_resource_group" "resourcegroup" {
 
 module "subnet1" {
   source = "./subnet"
+
+  resource_group_name = var.vnet_rg_name
+  virtual_network_name = var.vnet_name
   subnet_name = "app_subnet"
   address_prefix = "10.1.2.0/27"
 
