@@ -16,10 +16,9 @@ data "azurerm_virtual_network" "virtualnetwork" {
   resource_group_name = var.vnet_rg_name
 }
 
-
 data "azurerm_resource_group" "resourcegroup" {
     name = var.rg_name
-    location = var.location
+    //location = var.location
 }
 
 module "subnet1" {
