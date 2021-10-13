@@ -24,11 +24,11 @@ resource "azurerm_resource_group" "resourcegroup" {
     location = var.location
 }
 
-module "azurerm_subnet" "subnet1"{
-  source = "git::https://github.com/kaurharpreet15/git-repo/tree/main/terraform/subnet"
+module "subnet1"{
+  source = "./subnet/"
 
   subnet_name = "app_subnet"
-  address_prefix = "10.1.3.0/27"
+  address_prefix = ""
 
 }
 
