@@ -22,12 +22,14 @@ data "azurerm_virtual_network" "virtualnetwork" {
 resource "azurerm_resource_group" "resourcegroup" {
     name = var.rg_name
     location = var.location
-    tags = {
-        environment = var.environment
-        application = var.application
-        owner = var.owner
-        uai = var.uai
-    }
+}
+
+module "azurerm_subnet" "subnet1"{
+  source = ""
+
+  subnet_name = "app_subnet"
+  address_prefix = ""
+
 }
 
 
