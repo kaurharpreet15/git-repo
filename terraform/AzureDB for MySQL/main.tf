@@ -7,8 +7,8 @@ data "azurerm_resource_group" "resourcegroup" {
 }
 resource "azurerm_mysql_server" "mysqlserver" {
   name                = var.mysqlserver_name
-  location            = azurerm_resource_group.resourcegroup.location
-  resource_group_name = azurerm_resource_group.resourcegroup.name
+  location            = data.azurerm_resource_group.resourcegroup.location
+  resource_group_name = data.azurerm_resource_group.resourcegroup.name
 
   administrator_login          = var.adminaccount
   administrator_login_password = var.adminpassword
@@ -28,7 +28,7 @@ resource "azurerm_mysql_server" "mysqlserver" {
 
 resource "azurerm_mysql_database" "mysqlDB" {
   name                = var.mysqldbname
-  resource_group_name = azurerm_resource_group.resourcegroup.name
+  resource_group_name = data.azurerm_resource_group.resourcegroup.name
   server_name         = azurerm_mysql_server.mysqlserver.name
   charset             = "utf8"
   collation           = "utf8_unicode_ci"

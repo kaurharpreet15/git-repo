@@ -1,3 +1,8 @@
+variable "rg_name" {
+    type = string
+    default = "terraform_module"
+}
+
 variable "mysqlserver_name"{
     type = string
 }
