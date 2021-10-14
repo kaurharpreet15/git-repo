@@ -30,7 +30,7 @@ module "subnet1" {
 module "mysqldb"{
   source = "./AzureDB for MySQL"
   mysqlserver_name = "hakmysqlserver"
-  adminaccout = "hakadmin"
+  adminaccount = "hakadmin"
   adminpassword = "W@heguru1"
   sku = "B_Gen5_2"
   storage_size = "5120"
