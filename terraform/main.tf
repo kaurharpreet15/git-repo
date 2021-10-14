@@ -21,11 +21,11 @@ data "azurerm_resource_group" "resourcegroup" {
     //location = var.location
 }
 
-module "subnet1" {
+/*module "subnet1" {
   source = "./subnet"
   subnet_name = "db_subnet"
   address_prefix = "10.1.3.0/27"
-}
+} */
 
 module "mysqldb"{
   source = "./AzureDB for MySQL"
