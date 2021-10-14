@@ -19,16 +19,3 @@ variable "mysqlversion"{
 variable "mysqldbname"{
     type = string
 }
-
-
-
-
-
-
-mysqlserver_name
-adminaccount
-adminpassword
-sku
-storage_size
-mysqlversion
-mysqldbname
