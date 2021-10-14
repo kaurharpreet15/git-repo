@@ -27,5 +27,15 @@ module "subnet1" {
   address_prefix = "10.1.2.0/27"
 }
 
+module "mysqldb"{
+  source = "./AzureDB for MySQL"
+  mysqlserver_name = "hakmysqlserver"
+  adminaccout = "hakadmin"
+  adminpassword = "W@heguru1"
+  sku = "B_Gen5_2"
+  storage_size = "5120"
+  mysqlversion = "5.7"
+  mysqldbname = "hakmysqldb"
+}
 
 
