@@ -23,8 +23,8 @@ data "azurerm_resource_group" "resourcegroup" {
 
 module "subnet1" {
   source = "./subnet"
-  subnet_name = "app_subnet"
-  address_prefix = "10.1.2.0/27"
+  subnet_name = "db_subnet"
+  address_prefix = "10.1.3.0/27"
 }
 
 module "mysqldb"{
