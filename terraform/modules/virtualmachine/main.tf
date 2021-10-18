@@ -32,7 +32,7 @@ resource "azurerm_virtual_machine" "virtualmachine_web" {
   os_profile {
     computer_name  = var.webvm_name
     admin_username = "azureuser"
-    admin_password = "azur3_U53r01"
+    admin_password = ""
   }
   os_profile_linux_config {
     disable_password_authentication = false
