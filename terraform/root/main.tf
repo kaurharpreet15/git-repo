@@ -15,20 +15,13 @@ data "azurerm_virtual_network" "virtualnetwork" {
 
 data "azurerm_resource_group" "resourcegroup" {
     name = var.rg_name
-    //location = var.location
 }
-
-/*module "subnet1" {
-  source = "./subnet"
-  subnet_name = "db_subnet"
-  address_prefix = "10.1.3.0/27"
-} */
 
 module "mysqldb"{
   source = "./AzureDB for MySQL"
   mysqlserver_name = "hakmysqlserver"
   adminaccount = "hakadmin"
-  adminpassword = "W@heguru1"
+  adminpassword = ""
   sku = "B_Gen5_2"
   storage_size = "5120"
   mysqlversion = "5.7"
