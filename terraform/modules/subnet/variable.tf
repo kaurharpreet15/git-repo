@@ -1,6 +1,6 @@
 variable "vnet_name"{
     type = string
-    default = "363-gr-vnet"
+    default = "364-gr-vnet"
 }
 variable "vnet_rg_name"{
     type = string
