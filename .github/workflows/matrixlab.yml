@@ -1,0 +1,13 @@
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest  
+    strategy:
+      matrix:
+        configuration: [debug, release]
+    steps:
+    - run: echo "This job builds the cofiguration ${{ matrix.configuration }}."
