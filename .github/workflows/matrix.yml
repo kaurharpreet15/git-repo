@@ -2,11 +2,11 @@ on: workflow_dispatch
 jobs:
  examplematrix:
   strategy:
-   matrix:
-    os:[ubuntu-latest,windows-latest]
-    version:[10,12]
-   runs-on: ${{matrix.os}}
-   steps:
-   - uses: actions/setup-node@v3
-     with:
-      node-version: ${{matrix.version}}
+    matrix:
+     os: [ubuntu-latest,windows-latest]
+     version: [10,12]
+  runs-on: ${{matrix.os}}
+  steps:
+  - uses: actions/setup-node@v3
+    with:
+     node-version: ${{matrix.version}}
