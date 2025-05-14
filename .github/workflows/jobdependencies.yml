@@ -1,3 +1,4 @@
+name: jobdependencies-needs-lab
 on: workflow_dispatch
 jobs:
   build:
