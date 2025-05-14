@@ -104,7 +104,6 @@ jobs:
         env: 
           env_secret: ${{ secrets.MY_ENV_SECRET }}
 
-
   use-environment-prod:
     name: Use PROD environment
     runs-on: ubuntu-latest
