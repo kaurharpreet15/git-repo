@@ -1,3 +1,4 @@
+name: cache-primes
 on: workflow_dispatch
 jobs:
  build:
