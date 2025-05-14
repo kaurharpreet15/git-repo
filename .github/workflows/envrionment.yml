@@ -87,6 +87,7 @@ jobs:
           echo Repo secret is ${{ secrets.MY_REPO_SECRET }}
           echo Org secret is ${{ secrets.MY_ORG_SECRET }}
           echo Env secret is not accessible ${{ secrets.MY_ENV_SECRET }}
+          
   use-environment-uat:
     name: Use UAT environment
     runs-on: ubuntu-latest
