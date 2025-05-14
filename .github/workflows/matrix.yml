@@ -1,3 +1,4 @@
+name: matrixtest
 on: workflow_dispatch
 jobs:
  examplematrix:
