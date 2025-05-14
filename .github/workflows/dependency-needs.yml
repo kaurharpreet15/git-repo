@@ -1,3 +1,4 @@
+name: dependency-needs
 on: workflow_dispatch
 jobs:
  initial:
